@@ -7,6 +7,7 @@ public class No {
 	public String nome;
 	public double valorUni;
 	public int quantidade;
+	private double valorTotal;
 	public ArrayList<No> filhos = new ArrayList();
 
 	public String getNome() {
@@ -39,6 +40,27 @@ public class No {
 
 	public void setFilhos(ArrayList<No> filhos) {
 		this.filhos = filhos;
+	}
+	
+	public double getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(double valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+	
+	public double calculavalor(No no) {
+		double valor = 0;
+		for (int i=0; i<no.getFilhos().size(); i++) {
+			valor += no.getFilhos().get(i).getValorUni() * no.getFilhos().get(i).getQuantidade();
+			
+			
+		}
+		double valorTotal = valor + (no.getValorUni() * no.getQuantidade());
+		return valorTotal;
+		
+		
 	}
 
 

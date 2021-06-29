@@ -33,7 +33,7 @@ public class StartApp {
 		
 		while (option != 9) {
 			System.out.println("1 - para cadastrar o nome e preço das peças");
-			System.out.println("2 - para imprimir as peças no sistema");
+			System.out.println("2 - cadastrar automaticamente");
 			System.out.println("9 - para sair");
 			System.out.print("Digite sua opção: ");
 				option = readInt();
